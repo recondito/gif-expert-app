@@ -7,6 +7,8 @@ export const GifExpertApp = () => {
     const [ categories, setCategories ] = useState([ 'Demon Slayer', 'One Piece' ]);
 
     const onAddCategory = ( newCategory ) => {
+        // if ( categories.includes(newCategory) ) return;
+        if ( categories.findIndex( category => newCategory.toLowerCase() === category.toLowerCase() ) !== -1 ) return;
         // setCategories( [...categories, 'Stardew Valley'] );
         setCategories( [newCategory, ...categories] );
     }
@@ -26,7 +28,7 @@ export const GifExpertApp = () => {
             {/* <button onClick={ onAddCategory }>Add</button> */}
             <ol>
                 { 
-                categories.map(category => {
+                categories.map( ( category ) => {
                     return <li key={ category }>{ category }</li>
                     }) 
                 }
