@@ -6,25 +6,30 @@ export const GifExpertApp = () => {
 
     const [ categories, setCategories ] = useState([ 'Demon Slayer', 'One Piece' ]);
 
-    const onAddCategory = ( event ) => {
+    const onAddCategory = ( newCategory ) => {
         // setCategories( [...categories, 'Stardew Valley'] );
-        setCategories( categories => [...categories, 'Stardew Valley'] );
+        setCategories( [newCategory, ...categories] );
     }
 
     return (
         <>
             {/* { title } */}
             <h1>GifExpertApp</h1>
-            
+
             {/* {input} */}
-            <AddCategory />
+            <AddCategory 
+                // setCategories={ setCategories }
+                onNewCategory={ (value) => onAddCategory(value) }
+            />
 
             {/* {GIFs list} */}
-            <button onClick={ onAddCategory }>Add</button>
+            {/* <button onClick={ onAddCategory }>Add</button> */}
             <ol>
-                { categories.map(category => {
+                { 
+                categories.map(category => {
                     return <li key={ category }>{ category }</li>
-                }) }
+                    }) 
+                }
             </ol>
                 {/* {GIF Item} */}
         </>
