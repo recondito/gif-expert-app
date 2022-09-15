@@ -1,19 +1,16 @@
 import { useState } from "react";
-import { AddCategory } from "./components/AddCategory";
-import { GifGrid } from "./components/GifGrid";
+import { AddCategory, GifGrid } from "./components";
 
 export const GifExpertApp = () => {
   const [categories, setCategories] = useState([]);
 
   const onAddCategory = (newCategory) => {
-    // if ( categories.includes(newCategory) ) return;
     if (
       categories.findIndex(
         (category) => newCategory.toLowerCase() === category.toLowerCase()
       ) !== -1
     )
       return;
-    // setCategories( [...categories, 'Stardew Valley'] );
     setCategories([newCategory, ...categories]);
   };
 
