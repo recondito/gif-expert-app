@@ -1,33 +1,34 @@
+$primary-color: #eaeaea;
+
 * {
+    background-color: $primary-color;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #eaeaea;
-  }
-  
-  #root {
+}
+
+#root {
     display: flex;
     flex-direction:column;
     align-content: center;
     padding-left: 50px;
     padding-right: 50px;
+}
+
+form{
+    width: 100%;
+    box-sizing: border-box;
+    input {
+        background-color: white;
+        border-radius: 5px;
+        border: 1px solid rgb(97, 32, 158);
+        color: black;
+        font-size: 1.2rem;
+        outline: none;
+        padding: 10px 15px;
+        box-sizing: border-box;
+        width: 100%;
+      }
   }
 
-  form{
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  input {
-    background-color: white;
-    border-radius: 5px;
-    border: 1px solid rgb(97, 32, 158);
-    color: black;
-    font-size: 1.2rem;
-    outline: none;
-    padding: 10px 15px;
-    box-sizing: border-box;
-    width: 100%;
-  }
-  
   h1 {
     font-size: 3rem;
     text-align: center;
@@ -41,14 +42,14 @@
     font-size: 3rem;
     margin-bottom: 5px;
   }
-  
+
   .card-grid {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
   }
-  
+
   .card {
     align-content: center;
     align-items: center;
@@ -62,17 +63,15 @@
     margin-bottom: 20px;
     margin-right: 20px;
     overflow: hidden;
-  }
-  
-  .card p {
-    background-color: white;
-    flex: 1;
-    font-size: 1.5rem;
-    margin-top: 5px;
-    padding: 5px 20px 0px 20px;
-    text-align: center;
-  }
-  
-  .card img {
-    width: 100%;
+    p {
+        background-color: white;
+        flex: 1;
+        font-size: 1.5rem;
+        margin-top: 5px;
+        padding: 5px 20px 0px 20px;
+        text-align: center;
+    }
+    img {
+        width: 100%;
+    }
   }
