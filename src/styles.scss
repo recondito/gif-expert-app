@@ -13,7 +13,7 @@ $primary-color: #eaeaea;
     padding-right: 50px;
 }
 
-form{
+form {
     width: 100%;
     box-sizing: border-box;
     input {
@@ -30,7 +30,7 @@ form{
   }
 
   h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     text-align: center;
   }
   
@@ -53,7 +53,7 @@ form{
   .card {
     align-content: center;
     align-items: center;
-    background-color: white;
+    background-color: $primary-color;
     border-radius: 10px;
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.03);
     display: flex;
@@ -64,7 +64,7 @@ form{
     margin-right: 20px;
     overflow: hidden;
     p {
-        background-color: white;
+        background-color: $primary-color;
         flex: 1;
         font-size: 1.5rem;
         margin-top: 5px;
